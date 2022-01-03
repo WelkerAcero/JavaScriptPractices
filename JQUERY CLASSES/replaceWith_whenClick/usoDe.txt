@@ -1,0 +1,15 @@
+        $(document).ready(function(){
+            var z = document.getElementById('cerrar');
+            z.addEventListener("click", cerrar_banner, false);
+
+        
+            document.getElementById('imagen1').addEventListener("click", subWords, false);
+        });
+
+        function cerrar_banner(){
+            $('#banner').remove();
+        }
+
+        function subWords(){
+            $("#imagen1").replaceWith("<div id='sustitucion'>Agregado al carrito</did>")
+        }

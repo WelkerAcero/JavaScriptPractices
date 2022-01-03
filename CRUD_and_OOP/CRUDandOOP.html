@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    </link>
+    <title>Pruebas</title>
+    <script src="librerias/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            $("body").hide().fadeIn(3000);
+        })
+
+        var nombre = prompt("Escribe tu nombre, por favor");
+
+        var nombres = [
+            "Nombre0",
+            "Nombre1",
+            "nombre2",
+            "nombre3"
+        ];
+    </script>
+</head>
+
+<body>
+    <div>
+        <h1>Working with javascript</h1>
+        <h2>Lorem ipsum dolorLorem ipsum dolorLorem ipsum dolorLorem ipsum dolorLorem ipsum dolor<br>
+            Lorem ipsum dolorLorem ipsum dolorLorem ipsum dolorLorem ipsum dolorLorem ipsum dolor<br>
+            Lorem ipsum dolorLorem ipsum dolorLorem ipsum dolorLorem ipsum dolorLorem ipsum dolor<br>
+            Lorem ipsum dolorLorem ipsum dolorLorem ipsum dolorLorem ipsum dolorLorem ipsum dolor<br>
+            Lorem ipsum dolorLorem ipsum dolorLorem ipsum dolorLorem ipsum dolorLorem ipsum dolor
+        </h2>
+        <h1>Hecho por:
+            <script>document.write(nombre);</script>
+        </h1>
+        <img src="img/uts-calidad2.png" heiht="500px" width="500px">
+        <script>
+            document.write("<h1 class='title'>ARRAYS IN JS</h1>");
+
+            document.write("<h2> Exite un array con: " + nombres.length + " valores" + "<br>");
+            document.write("Los valores son: " + nombres + "</h2>" + "<br><br>");
+
+            document.write("<h1>Add information in array Push</h1>");
+            document.write("<h3> nombres.push('DatoAgregado_con_PUSH') </h3>");
+            nombres.push("DatoAgregado_con_PUSH");
+            document.write("Valores: " + nombres + "</p>" + "<br><br>");
+
+            document.write("<h1>Add information in array Unshift</h1>");
+            nombres.unshift("DatoAgregado_con_unshift");
+            document.write("Valores: " + nombres + "</p>" + "<br><br>");
+
+            document.write("<h1>Delete first value -> Shift</h1>");
+            document.write("<h3>array.shift()</h3>");
+            nombres.shift();
+            document.write("Valores: " + nombres + "</p>" + "<br><br>");
+
+            document.write("<h1>Delete last value -> Pop</h1>");
+            document.write("<h3>array.pop()</h3>");
+            nombres.pop();
+            document.write("Valores: " + nombres + "</p>" + "<br><br>");
+        </script>
+
+    </div>
+
+    <div>
+        <h1 class='title'>ORIENTED OBJECTS PROGRAMMING</h1>
+        <label for="button">A button</label><br>
+        <input type="button" id="button1">
+
+        <input type="text" id="button2">
+
+        <script>
+            //===========================Boton 1 ==============
+            var miboton = document.getElementById("button1");
+            miboton.focus();
+            miboton.style.width = "500px";
+            miboton.style.height = "100px";
+            miboton.style.bacgroundColor = "green";
+            //=================================================
+            
+            //===========================Boton 2 ==============
+            var miboton2 = document.getElementById("button2");
+            miboton2.style.width = "500px";
+            miboton2.style.height = "100px";
+            miboton2.style.bacgroundColor = "green";
+            miboton2.value = "Write here...";
+            //=================================================
+
+
+        </script>
+    </div>
+
+    <footer class="footer">Copyright &copy;
+        <br>
+        made by Welker Acero
+    </footer>
+</body>
+
+</html>

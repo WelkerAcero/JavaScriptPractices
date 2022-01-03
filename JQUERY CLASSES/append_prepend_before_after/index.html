@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting started</title>
+
+    <style>
+        .micontenedor{
+            background-color: aqua;
+        }
+    </style>
+
+    <script src="../../librerias/jquery-3.6.0.min.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            alert($("#errores h2").html());
+
+            $("#errores").append("<p> Hay errores en el formulario (append) agrega al final </p>"); // add at the end
+
+            $("#errores").prepend("<p> Hay errores en el formulario 2 (prepend) agrega al comienzo</p>");// // add at the beginning
+
+            $("#errores").before("<p> Hay errores en el formulario 2 (before agrega afuera, pero arriba)</p>");
+
+            $("#errores").after("<p> Hay errores en el formulario 2 (before agrega afuera, pero abajo)</p>")
+        });
+    </script>
+</head>
+<body>
+        <script>
+            for (let index = 0; index < 4; index++) {
+                document.write("<div id='errores' class='micontenedor'> <h2>Errores</h2> </div>"); 
+            }
+        </script>
+    
+</body>
+</html>

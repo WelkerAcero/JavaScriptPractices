@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For</title>
+
+    <script>
+
+        var Trabajadores = new Array();
+        var persona = "";
+        var contador = 0;
+
+        while(persona != "Salir"){
+
+            persona = prompt("Escribe el nombre de un trabajador");
+
+            Trabajadores.push(persona);
+
+        }
+
+        Trabajadores.pop(); //Eliminar la palabra "Salir"
+
+        for(var i = 0; i < Trabajadores.length; i++){
+            document.write(Trabajadores[i]+"<br><br>");
+        }
+
+        for(var i = 1; i <= 10; i++){
+            document.write(i+"<br>");
+            
+        }
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

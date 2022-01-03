@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do While</title>
+</head>
+
+<body>
+
+    <h1>RESULTS IN TABLE</h1>
+    <table class="table" padding="1" cellpadding>
+        <tr>
+            <td>
+                <label for="adviseNumber">Number of Advises</label><br>
+                <input type="text" class="adviseNumber" id="adviseNumber">
+            </td>
+            <td>
+                <label for="attemps">Attempts</label><br>
+                <input type="text" name="intentos" id="intentos">
+            </td>
+        </tr>
+    </table>
+
+</body>
+<script>
+    var rand = Math.round(Math.random() * 100);
+    var number = 0;
+    var attempts = 0;
+    var v = document.getElementById("adviseNumber");
+    var amount = document.getElementById("intentos"); 
+    do {
+
+        number = prompt("Write a number from 0 to 100");
+        
+        if (isNaN(number)) {
+            alert("Characters are not allowed, please write a number");
+            number = prompt("Write a number from 0 to 100");
+        }
+
+        if (number < rand) {
+            alert("The number is higher");
+        }
+
+        if (number > rand) {
+            alert("The number is lower");
+        }
+
+        attempts++;
+       
+    } while (rand != number);
+    alert("CONGRATULATION! YOU'VE GOT THE NUMBER IN " + attempts + " ATTEMPTS");
+    v.style.width = "200px";
+    v.style.height = "100px";
+    v.style.justifyContent = "center";
+    v.value = "CONGRATULATION! YOU'VE GOT THE NUMBER";
+    amount.value = attempts;
+        
+</script>
+</html>

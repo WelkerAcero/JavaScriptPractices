@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Calculator</title>
+
+    <script>
+
+        var cadena = "";
+        var acumulado = 0;
+        var process = 0;
+        var suma = false;
+        var resta = false;
+        var multiple = false;
+        var divide = false;
+
+        function displayNumbers(num) {
+            document.getElementById("result").value = cadena + num;
+            cadena = document.getElementById("result").value;
+        }
+
+        function sumar() {
+            if (resta) {
+                acumulado = acumulado - parseInt(cadena);
+                document.getElementById('result').value = acumulado;
+            } else {
+                acumulado += parseInt(cadena);
+                document.getElementById("result").value = acumulado;
+                suma = true;
+            }
+
+            cadena = "";
+
+        }
+
+        function restar() {
+            if (suma) {
+                acumulado += parseInt(cadena);
+                document.getElementById("result").value = acumulado;
+            } else {
+
+                if (acumulado == 0) {
+                    acumulado += parseInt(cadena);
+                } else {
+                    acumulado = acumulado - parseInt(cadena);
+                    document.getElementById('result').value = acumulado;
+                }
+
+            }
+            suma = false;
+            resta = true;
+            cadena = "";
+        }
+
+        function getResult() {
+
+            if (suma) {
+                document.getElementById("result").value = acumulado + parseInt(cadena);
+            } else if (resta) {
+
+                document.getElementById("result").value = acumulado - parseInt(cadena);
+            }
+
+            acumulado = parseInt(document.getElementById('result').value);
+            cadena = "";
+        }
+
+        function clear() {
+            document.getElementById("result").value = '0';
+            cadena = '';
+            console.log("Limpío");
+        }
+
+
+
+
+    </script>
+</head>
+
+<body>
+    <table class="table">
+        <form action="" class="form">
+            <label for="result"></label><br>
+            <input type="text" id="result">
+
+            <label for="boton"></label><br>
+            <input type="button" id="number" value="1" onclick="displayNumbers(1)">
+            <input type="button" id="number" value="2" onclick="displayNumbers(2)">
+            <input type="button" id="number" value="3" onclick="displayNumbers(3)">
+            <button type="button" id="number" value="" onclick="sumar()">+</button><br>
+
+            <input type="button" id="number" value="4" onclick="displayNumbers(4)">
+            <input type="button" id="number" value="5" onclick="displayNumbers(5)">
+            <input type="button" id="number" value="6" onclick="displayNumbers(6)">
+            <button type="button" id="number" value="" onclick="restar()">-</button><br>
+
+            <input type="button" id="number" value="7" onclick="displayNumbers(7)">
+            <input type="button" id="number" value="8" onclick="displayNumbers(8)">
+            <input type="button" id="number" value="9" onclick="displayNumbers(9)">
+            <button type="button" id="number" value="" onclick="multiplicar()">x</button>
+            <button type="button" id="number" value="" onclick="dividir()">/</button><br>
+
+            <input type="button" style="padding-right:13px;margin-left:0px" id="number" value="."
+                onclick="displayNumbers('.')">
+            <input type="button" id="number" value="0" onclick="displayNumbers(0)">
+
+
+            <button type="button" id="number" value="" onclick="coma()">,</button>
+
+            <button type="button" id="number" value="" onclick="getResult()">=</button><br>
+
+        </form>
+
+    </table>
+
+</body>
+
+<script>
+    document.getElementById("result").value = "0";
+</script>
+
+</html>

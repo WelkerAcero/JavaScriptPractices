@@ -1,0 +1,27 @@
+#primer_parrafo{
+    background-color: aqua;
+}
+
+.title{
+    text-align: center;
+}
+
+.news{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: 1px solid black;
+    padding-bottom: 200px;
+}
+
+#noticia1, #noticia2{
+    border: 1px solid blue;
+    margin: 10px;
+    text-align: justify;
+    padding:10px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+}

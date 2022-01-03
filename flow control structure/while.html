@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While</title>
+    <script>
+        var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November","December"]
+        var counter = 0;
+
+        var name = document.getElementById("name");
+        name = prompt("Write your name","Write here your name");
+
+        while(!isNaN(name)){
+            alert("Numbers are not allowed");
+            name = prompt("Write your name","Write here your name");
+        }
+        
+        var age = document.getElementById("age");
+        age = prompt("Write your age","Write here your age");
+
+        while(age<=0 || age>105 || isNaN(age)){
+            alert("Write a valid age");
+            age = prompt("Write your age","Write here your age");
+        }
+        
+        var city = document.getElementById("city");
+        city = prompt("Write your city","Write here your city");
+
+        while(!isNaN(city)){
+            alert("Numbers are not allowed");
+            name = prompt("Write your city","Write here your city");
+        }
+
+    </script>
+</head>
+
+<body>
+    <script>
+        while (counter < months.length) {
+            var month = [];
+            month = months[counter];
+            document.write(month+" <br>");
+            counter++;
+        }
+    </script>
+
+    <div class="container">
+        <label for="name">Name: </label>
+        <script>document.write(name);</script><br>
+
+        <label for="age">Age: </label>
+        <script>document.write(age);</script><br>
+
+        <label for="city">City: </label>
+        <script>document.write(city);</script><br>
+    </div>
+
+    <style>
+        .container{
+            width: 25%;
+            background-color:coral;
+            margin:auto;
+            padding:15px;
+        }
+    </style>
+</body>
+
+</html>
